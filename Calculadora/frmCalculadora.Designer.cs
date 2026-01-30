@@ -33,6 +33,7 @@
             txtVariableA = new TextBox();
             txtVariableB = new TextBox();
             btnCalcular = new Button();
+            btnReset = new Button();
             SuspendLayout();
             // 
             // label1
@@ -76,7 +77,7 @@
             btnCalcular.BackColor = Color.FromArgb(255, 192, 192);
             btnCalcular.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnCalcular.ForeColor = SystemColors.ActiveCaptionText;
-            btnCalcular.Location = new Point(319, 161);
+            btnCalcular.Location = new Point(319, 129);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(112, 54);
             btnCalcular.TabIndex = 4;
@@ -84,11 +85,22 @@
             btnCalcular.UseVisualStyleBackColor = false;
             btnCalcular.Click += btnCalcular_Click;
             // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(319, 214);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(112, 45);
+            btnReset.TabIndex = 5;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // frmCalculadora
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnReset);
             Controls.Add(btnCalcular);
             Controls.Add(txtVariableB);
             Controls.Add(txtVariableA);
@@ -107,5 +119,6 @@
         private TextBox txtVariableA;
         private TextBox txtVariableB;
         private Button btnCalcular;
+        private Button btnReset;
     }
 }
