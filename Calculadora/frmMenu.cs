@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculadora.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,12 @@ namespace Calculadora
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void registroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroAlumnos registro = new frmRegistroAlumnos();
+            registro.ShowDialog();
         }
     }
 }

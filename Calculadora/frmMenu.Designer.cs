@@ -35,6 +35,7 @@
             calculadoraSimpleToolStripMenuItem = new ToolStripMenuItem();
             ordenamientoToolStripMenuItem = new ToolStripMenuItem();
             burbujaToolStripMenuItem = new ToolStripMenuItem();
+            registroToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,13 +59,13 @@
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(270, 34);
+            salirToolStripMenuItem.Size = new Size(147, 34);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // apliacionesToolStripMenuItem
             // 
-            apliacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientoToolStripMenuItem });
+            apliacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientoToolStripMenuItem, registroToolStripMenuItem });
             apliacionesToolStripMenuItem.Name = "apliacionesToolStripMenuItem";
             apliacionesToolStripMenuItem.Size = new Size(118, 29);
             apliacionesToolStripMenuItem.Text = "Apliaciones";
@@ -90,6 +91,13 @@
             burbujaToolStripMenuItem.Text = "Burbuja";
             burbujaToolStripMenuItem.Click += burbujaToolStripMenuItem_Click;
             // 
+            // registroToolStripMenuItem
+            // 
+            registroToolStripMenuItem.Name = "registroToolStripMenuItem";
+            registroToolStripMenuItem.Size = new Size(270, 34);
+            registroToolStripMenuItem.Text = "Registros";
+            registroToolStripMenuItem.Click += registroToolStripMenuItem_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -114,5 +122,6 @@
         private ToolStripMenuItem calculadoraSimpleToolStripMenuItem;
         private ToolStripMenuItem ordenamientoToolStripMenuItem;
         private ToolStripMenuItem burbujaToolStripMenuItem;
+        private ToolStripMenuItem registroToolStripMenuItem;
     }
 }
