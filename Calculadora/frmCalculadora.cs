@@ -23,7 +23,15 @@ namespace Calculadora
                 a = Convert.ToInt32(txtVariableA.Text);
                 b = int.Parse(txtVariableB.Text);
 
-                resultado = a + b;
+                if (RdbSuma.Checked)
+                    resultado = a + b;
+                if (RdbResta.Checked)
+                    resultado = a - b;
+                if (RdbMultiplicacion.Checked)
+                    resultado = a * b;
+                if (RdbDivision.Checked)
+                    resultado = a / b;
+
                 MessageBox.Show("El resultado es: " + resultado.ToString(), "Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -48,5 +56,9 @@ namespace Calculadora
             txtVariableA.Focus();
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

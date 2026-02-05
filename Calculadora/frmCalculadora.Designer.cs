@@ -34,6 +34,12 @@
             txtVariableB = new TextBox();
             btnCalcular = new Button();
             btnReset = new Button();
+            groupBox1 = new GroupBox();
+            RdbSuma = new RadioButton();
+            RdbResta = new RadioButton();
+            RdbMultiplicacion = new RadioButton();
+            RdbDivision = new RadioButton();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -77,7 +83,7 @@
             btnCalcular.BackColor = Color.FromArgb(255, 192, 192);
             btnCalcular.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnCalcular.ForeColor = SystemColors.ActiveCaptionText;
-            btnCalcular.Location = new Point(319, 129);
+            btnCalcular.Location = new Point(346, 41);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(112, 54);
             btnCalcular.TabIndex = 4;
@@ -87,19 +93,80 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(319, 214);
+            btnReset.BackColor = Color.FromArgb(255, 192, 192);
+            btnReset.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnReset.Location = new Point(505, 47);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(112, 45);
             btnReset.TabIndex = 5;
             btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = true;
+            btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(RdbDivision);
+            groupBox1.Controls.Add(RdbMultiplicacion);
+            groupBox1.Controls.Add(RdbResta);
+            groupBox1.Controls.Add(RdbSuma);
+            groupBox1.Location = new Point(397, 143);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(300, 234);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Operaciones";
+            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // RdbSuma
+            // 
+            RdbSuma.AutoSize = true;
+            RdbSuma.Location = new Point(29, 45);
+            RdbSuma.Name = "RdbSuma";
+            RdbSuma.Size = new Size(82, 29);
+            RdbSuma.TabIndex = 0;
+            RdbSuma.TabStop = true;
+            RdbSuma.Text = "Suma";
+            RdbSuma.UseVisualStyleBackColor = true;
+            // 
+            // RdbResta
+            // 
+            RdbResta.AutoSize = true;
+            RdbResta.Location = new Point(29, 95);
+            RdbResta.Name = "RdbResta";
+            RdbResta.Size = new Size(79, 29);
+            RdbResta.TabIndex = 1;
+            RdbResta.TabStop = true;
+            RdbResta.Text = "Resta";
+            RdbResta.UseVisualStyleBackColor = true;
+            // 
+            // RdbMultiplicacion
+            // 
+            RdbMultiplicacion.AutoSize = true;
+            RdbMultiplicacion.Location = new Point(29, 139);
+            RdbMultiplicacion.Name = "RdbMultiplicacion";
+            RdbMultiplicacion.Size = new Size(146, 29);
+            RdbMultiplicacion.TabIndex = 2;
+            RdbMultiplicacion.TabStop = true;
+            RdbMultiplicacion.Text = "Multiplicacion";
+            RdbMultiplicacion.UseVisualStyleBackColor = true;
+            // 
+            // RdbDivision
+            // 
+            RdbDivision.AutoSize = true;
+            RdbDivision.Location = new Point(29, 183);
+            RdbDivision.Name = "RdbDivision";
+            RdbDivision.Size = new Size(100, 29);
+            RdbDivision.TabIndex = 3;
+            RdbDivision.TabStop = true;
+            RdbDivision.Text = "Division";
+            RdbDivision.UseVisualStyleBackColor = true;
             // 
             // frmCalculadora
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox1);
             Controls.Add(btnReset);
             Controls.Add(btnCalcular);
             Controls.Add(txtVariableB);
@@ -108,6 +175,8 @@
             Controls.Add(label1);
             Name = "frmCalculadora";
             Text = "Calculadora";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -120,5 +189,10 @@
         private TextBox txtVariableB;
         private Button btnCalcular;
         private Button btnReset;
+        private GroupBox groupBox1;
+        private RadioButton RdbResta;
+        private RadioButton RdbSuma;
+        private RadioButton RdbDivision;
+        private RadioButton RdbMultiplicacion;
     }
 }
