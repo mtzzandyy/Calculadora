@@ -38,5 +38,22 @@ namespace Calculadora
             frmRegistroAlumnos registro = new frmRegistroAlumnos();
             registro.ShowDialog();
         }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void relojToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTemporizadores reloj = new frmTemporizadores();
+            reloj.ShowDialog();
+        }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditor editor = new frmEditor();
+            editor.ShowDialog();
+        }
     }
 }
